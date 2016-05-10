@@ -1,4 +1,3 @@
-
 # This file was generated automatically from conda-smithy. To update this configuration,
 # update the conda-forge.yaml and/or the recipe/meta.yaml.
 
@@ -7,30 +6,35 @@ language: objective-c
 env:
   matrix:
     
-    - CONDA_NPY=110  CONDA_PY=27  
-    - CONDA_NPY=19  CONDA_PY=27  
-    - CONDA_NPY=110  CONDA_PY=34  
-    - CONDA_NPY=19  CONDA_PY=34  
-    - CONDA_NPY=110  CONDA_PY=35  
-    - CONDA_NPY=19  CONDA_PY=35  
+    - CONDA_NPY=110  CONDA_PY=27
+    - CONDA_NPY=111  CONDA_PY=27
+    - CONDA_NPY=110  CONDA_PY=34
+    - CONDA_NPY=111  CONDA_PY=34
+    - CONDA_NPY=110  CONDA_PY=35
+    - CONDA_NPY=111  CONDA_PY=35
   global:
     # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
     - secure: "IsA4FE2J8GDruObqFhatCT6BO8+UQ4pzERU/w7dk7OOw/uTr/G5Dmp6RSul4kuKvdjOWf83LVfFpdEIZBmIJK1VbGuQim2Y4OAhn+uBTOrg+LQy6WOcL7T/MPecV6QF1ZxdlbsHvF32YWrXWOh4LUWOsJQXjROi00ugIGWof99WRKm0dGGJEsYOvdrhbtIIuKzT+lAUgTxXQuH1bqpIiyY98hZNBnv76jbPyR/VLLF6qJvNuRdDs3kZp2iYKlv6k5STaVFe8Jur2s0lRzvnv3/h1WJVzhCqbdjxhwz5Hgnq8VoS1TXBfndTiLeg38a3/pEirhQEznuYzJFnGi9gWNGB/+RqInBCI8vsDZdVh6kBB8pq2h1wqTgSsFWLJFhsluYfyF5waPRJWjwwB4TUrKZGQWFXzg/YDEmpXpQxQn8Je1Hu4dLF8vH3ckAKXVpA89krQW5SNgOswwIHsFHQ95r16Ufm1SBqcCt5x2aVxVc1FtB5I7DnuLcVlI2qYZb/y6snU8On6yU/j3bgocgHJS9YZJ/puGVrnnNFRW8qhVJMZlKwAdUcw2uskPE3XNmE5NHEAU/xfpcY7X+w67rXdmjgAyYc5mg6RCDNDcqG+P+ijPzv1wQ8h9MwUVMm46g279bxB8P34LDhLBix5MoBjID+IreqyYgl4CrE7VKOx6U0="
 
 
+before_install:
+    # Remove homebrew.
+    - brew remove --force $(brew list)
+    - brew cleanup -s
+    - rm -rf $(brew --cache)
+
 install:
     - |
       MINICONDA_URL="http://repo.continuum.io/miniconda"
-      MINICONDA_FILE="Miniconda3-3.7.3-MacOSX-x86_64.sh"
-      wget "${MINICONDA_URL}/${MINICONDA_FILE}"
+      MINICONDA_FILE="Miniconda3-latest-MacOSX-x86_64.sh"
+      curl -O "${MINICONDA_URL}/${MINICONDA_FILE}"
       bash $MINICONDA_FILE -b
 
       export PATH=/Users/travis/miniconda3/bin:$PATH
 
+      conda config --set show_channel_urls true
       conda update --yes conda
-      conda install --yes conda-build jinja2 anaconda-client
-
-      
+      conda install --yes conda-build=1.20.0 jinja2 anaconda-client
       conda config --add channels conda-forge
       
 
