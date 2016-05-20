@@ -18,7 +18,7 @@ build:
 
 requirements:
   build:
-    - boost >=1.56
+    - boost 1.60*
     - python
     - setuptools >=18.0
     - numpy x.x
@@ -26,7 +26,7 @@ requirements:
     - cython >=0.23
 
   run:
-    - boost >=1.56
+    - boost 1.60*
     - python
     - numpy x.x
     - numpy >=1.7
