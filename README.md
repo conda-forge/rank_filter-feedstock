@@ -70,7 +70,7 @@ Terminology
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/rank_filter-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/rank_filter-feedstock)
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/rank_filter-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/rank_filter-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/rank_filter-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/rank_filter-feedstock)
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/rank-filter-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/rank-filter-feedstock/branch/master)
 
