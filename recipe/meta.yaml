@@ -1,6 +1,6 @@
 {% set name = "rank_filter" %}
-{% set version = "0.4.11" %}
-{% set checksum = "246f5c73ebd03314d9b2cff3ede74330" %}
+{% set version = "0.4.12" %}
+{% set checksum = "a55775639a2763747c7e7d48178836c69cab776cb6cf675f6063cca27c2093d5" %}
 
 package:
   name: {{ name }}
@@ -8,21 +8,13 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.python.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  md5: {{ checksum }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ checksum }}
 
 build:
   skip: true  # [win]
-  number: 3
-  script:
-    # FIXME: This is a hack to make sure the environment is activated.
-    # The reason this is required is due to the conda-build issue
-    # mentioned below.
-    #
-    # https://github.com/conda/conda-build/issues/910
-    #
-    - source activate "${CONDA_DEFAULT_ENV}"  # [unix]
-    - python setup.py install --single-version-externally-managed --record record.txt
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
   build:
@@ -47,6 +39,7 @@ test:
 about:
   home: https://github.com/nanshe-org/rank_filter
   license: BSD 3-Clause
+  license_file: LICENSE.txt
   summary: 'A simple python module containing an in-place linear rank filter optimized in C++.'
 
 extra:
