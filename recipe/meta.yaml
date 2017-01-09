@@ -13,13 +13,13 @@ source:
 
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
   build:
     - toolchain
-    - boost 1.61.*
+    - boost 1.63.*
     - python
     - setuptools >=18.0
     - numpy x.x
@@ -27,7 +27,7 @@ requirements:
     - cython >=0.23
 
   run:
-    - boost 1.61.*
+    - boost 1.63.*
     - python
     - numpy x.x
     - numpy >=1.7
