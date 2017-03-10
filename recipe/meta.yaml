@@ -1,6 +1,6 @@
 {% set name = "rank_filter" %}
-{% set version = "0.4.12" %}
-{% set checksum = "a55775639a2763747c7e7d48178836c69cab776cb6cf675f6063cca27c2093d5" %}
+{% set version = "0.4.13" %}
+{% set checksum = "cf5cffa85bc0c4b8d716938d08bfe8af9e7e3fe81bf7af2a3a6e0e2675d083e2" %}
 
 package:
   name: {{ name }}
@@ -13,7 +13,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 2
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -33,8 +33,14 @@ requirements:
     - numpy >=1.7
 
 test:
+  source_files:
+    - tests
+
   imports:
     - rank_filter
+
+  commands:
+    - python -m unittest discover -s .
 
 about:
   home: https://github.com/nanshe-org/rank_filter
