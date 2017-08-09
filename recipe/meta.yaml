@@ -1,6 +1,6 @@
 {% set name = "rank_filter" %}
-{% set version = "0.4.13" %}
-{% set checksum = "cf5cffa85bc0c4b8d716938d08bfe8af9e7e3fe81bf7af2a3a6e0e2675d083e2" %}
+{% set version = "0.4.14" %}
+{% set checksum = "617dddeb32d1a084fa125dc371a5c0337be8d164f5fc16b6dbe48284dd5282dc" %}
 
 package:
   name: {{ name }}
@@ -12,8 +12,7 @@ source:
   sha256: {{ checksum }}
 
 build:
-  skip: true  # [win]
-  number: 2
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
