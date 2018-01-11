@@ -1,6 +1,6 @@
 {% set name = "rank_filter" %}
-{% set version = "0.4.14" %}
-{% set checksum = "617dddeb32d1a084fa125dc371a5c0337be8d164f5fc16b6dbe48284dd5282dc" %}
+{% set version = "0.4.15" %}
+{% set checksum = "e5a3c6eb3a1c23e7a522221b54a7f96b5c38d4e47a4adf461c073f0ddacbf3d5" %}
 
 package:
   name: {{ name }}
@@ -12,13 +12,13 @@ source:
   sha256: {{ checksum }}
 
 build:
-  number: 2
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
   build:
     - toolchain
-    - boost-cpp 1.65.1
+    - boost-cpp 1.66.0
     - python
     - setuptools >=18.0
     - numpy 1.8.*  # [not (win and (py35 or py36))]
@@ -27,7 +27,7 @@ requirements:
     - cython >=0.23
 
   run:
-    - boost-cpp 1.65.1
+    - boost-cpp 1.66.0
     - python
     - numpy >=1.8  # [not (win and (py35 or py36))]
     - numpy >=1.9  # [win and py35]
