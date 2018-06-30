@@ -14,14 +14,16 @@ Summary: A simple python module containing an in-place linear rank filter optimi
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/rank_filter-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/rank_filter-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/rank_filter-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/rank_filter-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/rank_filter-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/rank-filter-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/rank_filter-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/rank_filter-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/rank_filter-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/rank_filter-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/rank_filter-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/rank-filter-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/rank_filter/badges/version.svg)](https://anaconda.org/conda-forge/rank_filter)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/rank_filter/badges/downloads.svg)](https://anaconda.org/conda-forge/rank_filter)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-rank_filter-green.svg)](https://anaconda.org/conda-forge/rank_filter) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/rank_filter.svg)](https://anaconda.org/conda-forge/rank_filter) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/rank_filter.svg)](https://anaconda.org/conda-forge/rank_filter) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/rank_filter.svg)](https://anaconda.org/conda-forge/rank_filter) |
 
 Installing rank_filter
 ======================
