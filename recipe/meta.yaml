@@ -13,7 +13,7 @@ source:
 
 build:
   number: 1
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
@@ -22,6 +22,7 @@ requirements:
   host:
     - boost-cpp
     - python
+    - pip
     - setuptools >=18.0
     - numpy
     - cython >=0.23
