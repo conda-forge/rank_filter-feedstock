@@ -1,6 +1,6 @@
 {% set name = "rank_filter" %}
-{% set version = "0.4.15" %}
-{% set checksum = "e5a3c6eb3a1c23e7a522221b54a7f96b5c38d4e47a4adf461c073f0ddacbf3d5" %}
+{% set version = "0.5.0" %}
+{% set checksum = "ff6940544d7cb98d4c8f2a78bda75f2da5e5b2e27bf0d36bcb18168a5280ddb2" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ checksum }}
 
 build:
-  number: 1002
+  number: 1000
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
