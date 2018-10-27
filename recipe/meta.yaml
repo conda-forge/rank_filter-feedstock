@@ -1,6 +1,6 @@
 {% set name = "rank_filter" %}
-{% set version = "0.5.0" %}
-{% set checksum = "ff6940544d7cb98d4c8f2a78bda75f2da5e5b2e27bf0d36bcb18168a5280ddb2" %}
+{% set version = "0.5.1" %}
+{% set checksum = "d7f8768677150ed6e030669d7d249bc8b32d07a89275cb701fc1b37659675be9" %}
 
 package:
   name: {{ name }}
