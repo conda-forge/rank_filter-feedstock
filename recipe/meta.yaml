@@ -12,8 +12,9 @@ source:
   sha256: {{ checksum }}
 
 build:
-  number: 1002
+  number: 1003
   script: "{{ PYTHON }} -m pip install . -vv"
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
