@@ -44,7 +44,7 @@ test:
 
 about:
   home: https://github.com/nanshe-org/rank_filter
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE.txt
   summary: 'A simple python module containing an in-place linear rank filter optimized in C++.'
 
