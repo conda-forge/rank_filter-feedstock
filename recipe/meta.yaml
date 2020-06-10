@@ -12,7 +12,7 @@ source:
   sha256: {{ checksum }}
 
 build:
-  number: 1004
+  number: 1005
   script: "{{ PYTHON }} -m pip install . -vv"
   skip: true  # [win and vc<14]
 
@@ -44,7 +44,7 @@ test:
 
 about:
   home: https://github.com/nanshe-org/rank_filter
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE.txt
   summary: 'A simple python module containing an in-place linear rank filter optimized in C++.'
 

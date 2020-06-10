@@ -3,7 +3,7 @@ About rank_filter
 
 Home: https://github.com/nanshe-org/rank_filter
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
